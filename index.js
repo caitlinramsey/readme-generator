@@ -5,7 +5,9 @@ const questions = ['What was your motivation?', 'Why did you build this project?
 'What problem does it solve?', 'What did you learn?', 'What makes your project stand out?'];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    return fileName + questions + data
+}
 
 // TODO: Create a function to initialize app
 function init() {}
