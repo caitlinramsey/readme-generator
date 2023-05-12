@@ -1,8 +1,8 @@
-// TODO: Include packages needed for this application
+// packages needed for this application
 const inquirer = require('inquirer');
 const { writeFile } = require('fs').promises;
 
-// TODO: Create an array of questions for user input
+// an array of questions for user input
 
 const userQuestions = () => {  
     return inquirer.prompt([
@@ -34,7 +34,12 @@ const userQuestions = () => {
     ]);
 };
 
-const generateREADME = ({ motivation, build, problem, learn, standout })
+const generateREADME = ({ motivation, build, problem, learn, standout }) =>
+    `My  motivation in creating this was ${motivation}.
+     I built this project because ${build}.
+     This application solves the problem of ${problem}.
+     Through creating this application, I learned ${learn}.
+     This project stands out because ${standout}.`
 
 
     // .then((answers) => {
@@ -50,7 +55,7 @@ const generateREADME = ({ motivation, build, problem, learn, standout })
 //     return fileName + questions + data
 // }
 
-// TODO: Create a function to initialize app
+// function to initialize app
 function init = () => {
     userQuestions()
         .then((answers) => writeFile('README.md', generateREADME(answers)))
@@ -58,5 +63,5 @@ function init = () => {
         .catch((err) => console.error(err));
 };
 
-// Function call to initialize app
+// function call to initialize app
 init();
