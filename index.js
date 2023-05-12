@@ -41,20 +41,6 @@ const generateREADME = ({ motivation, build, problem, learn, standout }) =>
      Through creating this application, I learned ${learn}.
      This project stands out because ${standout}.`
 
-
-    // .then((answers) => {
-    //     const readMeContent = generateREADME(answers);
-
-    //     fs.writeToFile('README.md', readMeContent, (err) =>
-    //     err ? console.log(err) : console.log('Successfully created README!')
-    //     );
-    // });
-
-// TODO: Create a function to write README file
-// function writeToFile(fileName, data) {
-//     return fileName + questions + data
-// }
-
 // function to initialize app
 function init = () => {
     userQuestions()
