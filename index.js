@@ -1,11 +1,11 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
-const fs = require('fs');
+const { writeFile } = require('fs').promises;
 
 // TODO: Create an array of questions for user input
 
-inquirer   
-    .prompt([
+const userQuestions = () => {  
+    return inquirer.prompt([
         {
             type: 'input',
             name: 'motivation',
@@ -31,22 +31,32 @@ inquirer
             name: 'standout',
             message: 'What makes your project stand out?',
         },
-    ])
-    .then((answers) => {
-        const readMeContent = generateREADME(answers);
+    ]);
+};
 
-        fs.writeToFile('README.md', readMeContent, (err) =>
-        err ? console.log(err) : console.log('Successfully created README!')
-        );
-    });
-    
+const generateREADME = ({ motivation, build, problem, learn, standout })
+
+
+    // .then((answers) => {
+    //     const readMeContent = generateREADME(answers);
+
+    //     fs.writeToFile('README.md', readMeContent, (err) =>
+    //     err ? console.log(err) : console.log('Successfully created README!')
+    //     );
+    // });
+
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-    return fileName + questions + data
-}
+// function writeToFile(fileName, data) {
+//     return fileName + questions + data
+// }
 
 // TODO: Create a function to initialize app
-function init() {}
+function init = () => {
+    userQuestions()
+        .then((answers) => writeFile('README.md', generateREADME(answers)))
+        .then (() => console.log('Successfully generated README.md!'))
+        .catch((err) => console.error(err));
+};
 
 // Function call to initialize app
 init();
