@@ -16,11 +16,11 @@ const userQuestions = () => {
             name: 'description',
             message: 'Please provide a description of your application:',
         },
-        {
-            type: 'input',
-            name: 'table',
-            message: 'Please provide a Table of Contents',
-        },
+        // {
+        //     type: 'input',
+        //     name: 'table',
+        //     message: 'Please provide a Table of Contents',
+        // },
         {
             type: 'input',
             name: 'installation',
@@ -32,9 +32,9 @@ const userQuestions = () => {
             message: 'What is the usage of your application?',
         },
         {
-            type: 'input',
+            type: 'checkbox',
             name: 'license',
-            message: 'Please provide licensing:',
+            message: 'Please pick your License:',
         },
         {
             type: 'input',
@@ -64,25 +64,41 @@ const userQuestions = () => {
     ]);
 };
 
-const generateREADME = ({ title, description, table, installation, usage, license, contributing, tests, github, email, instructions' }) =>
-    `${title}
-     Description
+const generateREADME = ({ title, description, table, installation, usage, license, contributing, tests, github, email, instructions }) =>
+    `# ${title}
+
+     ## Description
      ${description}
-     Table of Contents
-     ${table}
-     Installation
+
+     ## Table of Contents
+     - Installation (#installation)
+     - Usage (#usage)
+     - License (#license)
+     - Contributing (#contributing)
+     - Tests (#tests)
+     - GitHub (#github)
+     - Email (#email)
+     - Instructions (#instructions)
+
+     ## Installation
      ${installation}
-     Usage
+
+     ## Usage
      ${usage}
-     License
+
+     ## License
      ${license}
-     Contributing
+
+     ## Contributing
      ${contributing}
-     Tests
+
+     ## Tests
      ${tests}
-     Questions
-     ${github}
-     ${email}
+
+     ## Questions
+     GitHub: ${github}
+     Email: ${email}
+     Instructions for reaching out with questions: 
      ${instructions}`
 
 // function to initialize app
