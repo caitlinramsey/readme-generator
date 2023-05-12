@@ -34,6 +34,7 @@ const userQuestions = () => {
         {
             type: 'checkbox',
             name: 'license',
+            choices: ['MIT', 'GPLv3', 'GPL'],
             message: 'Please pick your License:',
         },
         {
@@ -64,7 +65,7 @@ const userQuestions = () => {
     ]);
 };
 
-const generateREADME = ({ title, description, table, installation, usage, license, contributing, tests, github, email, instructions }) =>
+const generateREADME = ({ title, description, installation, usage, license, contributing, tests, github, email, instructions }) =>
     `# ${title}
 
      ## Description

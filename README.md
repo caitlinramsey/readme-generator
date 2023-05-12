@@ -1,9 +1,9 @@
-## README
+#README
 
-     ## Description
+     ##Description
      description
 
-     ## Table of Contents
+     ##Table of Contents
      - Installation (#installation)
      - Usage (#usage)
      - License (#license)
@@ -13,22 +13,23 @@
      - Email (#email)
      - Instructions (#instructions)
 
-     ## Installation
+     ##Installation
      install
 
-     ## Usage
+     ##Usage
      usage
 
-     ## License
+     ##License
      MIT
 
-     ## Contributing
-     contribute
+     ##Contributing
+     cont
 
-     ## Tests
+     ##Tests
      test
 
-     ## Questions
-     caitlin
-     caitlin
+     ##Questions
+     GitHub: caitlinr
+     Email: caitlin
+     Instructions for reaching out with questions: 
      email
