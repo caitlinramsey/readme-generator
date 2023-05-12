@@ -8,41 +8,85 @@ const userQuestions = () => {
     return inquirer.prompt([
         {
             type: 'input',
-            name: 'motivation',
-            message: 'What was your motivation?',
+            name: 'title',
+            message: 'What is the title of your application?',
         },
         {
             type: 'input',
-            name: 'build',
-            message: 'Why did you build this project?',
+            name: 'description',
+            message: 'Please provide a description of your application:',
         },
         {
             type: 'input',
-            name: 'problem',
-            message: 'What problem does it solve?',
+            name: 'table',
+            message: 'Please provide a Table of Contents',
         },
         {
             type: 'input',
-            name: 'learn',
-            message: 'What did you learn?',
+            name: 'installation',
+            message: 'Please provide installation instructions:',
         },
         {
             type: 'input',
-            name: 'standout',
-            message: 'What makes your project stand out?',
+            name: 'usage',
+            message: 'What is the usage of your application?',
+        },
+        {
+            type: 'input',
+            name: 'license',
+            message: 'Please provide licensing:',
+        },
+        {
+            type: 'input',
+            name: 'contributing',
+            message: 'Please list contribution instructions:',
+        },
+        {
+            type: 'input',
+            name: 'tests',
+            message: 'Please list testing instructions:',
+        },
+        {
+            type: 'input',
+            name: 'github',
+            message: 'GitHub username:',
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'Email address:',
+        },
+        {
+            type: 'input',
+            name: 'instructions',
+            message: 'Please include instructions for reaching out with questions:',
         },
     ]);
 };
 
-const generateREADME = ({ motivation, build, problem, learn, standout }) =>
-    `My  motivation in creating this was ${motivation}.
-     I built this project because ${build}.
-     This application solves the problem of ${problem}.
-     Through creating this application, I learned ${learn}.
-     This project stands out because ${standout}.`
+const generateREADME = ({ title, description, table, installation, usage, license, contributing, tests, github, email, instructions' }) =>
+    `${title}
+     Description
+     ${description}
+     Table of Contents
+     ${table}
+     Installation
+     ${installation}
+     Usage
+     ${usage}
+     License
+     ${license}
+     Contributing
+     ${contributing}
+     Tests
+     ${tests}
+     Questions
+     ${github}
+     ${email}
+     ${instructions}`
 
 // function to initialize app
-function init = () => {
+const init = () => {
     userQuestions()
         .then((answers) => writeFile('README.md', generateREADME(answers)))
         .then (() => console.log('Successfully generated README.md!'))
