@@ -1,6 +1,7 @@
 // packages needed for this application
 const inquirer = require('inquirer');
 const { writeFile } = require('fs').promises;
+const generateMarkdown = require('./utils/generateMarkdown');
 
 // an array of questions for user input
 
@@ -16,11 +17,6 @@ const userQuestions = () => {
             name: 'description',
             message: 'Please provide a description of your application:',
         },
-        // {
-        //     type: 'input',
-        //     name: 'table',
-        //     message: 'Please provide a Table of Contents',
-        // },
         {
             type: 'input',
             name: 'installation',
@@ -34,7 +30,7 @@ const userQuestions = () => {
         {
             type: 'checkbox',
             name: 'license',
-            choices: ['MIT', 'GPLv3', 'GPL'],
+            choices: ['MIT', 'IBM', 'Mozilla', 'None'],
             message: 'Please pick your License:',
         },
         {
@@ -65,47 +61,10 @@ const userQuestions = () => {
     ]);
 };
 
-const generateREADME = ({ title, description, installation, usage, license, contributing, tests, github, email, instructions }) =>
-    `# ${title}
-
-     ## Description
-     ${description}
-
-     ## Table of Contents
-     - Installation (#installation)
-     - Usage (#usage)
-     - License (#license)
-     - Contributing (#contributing)
-     - Tests (#tests)
-     - GitHub (#github)
-     - Email (#email)
-     - Instructions (#instructions)
-
-     ## Installation
-     ${installation}
-
-     ## Usage
-     ${usage}
-
-     ## License
-     ${license}
-
-     ## Contributing
-     ${contributing}
-
-     ## Tests
-     ${tests}
-
-     ## Questions
-     GitHub: ${github}
-     Email: ${email}
-     Instructions for reaching out with questions: 
-     ${instructions}`
-
 // function to initialize app
 const init = () => {
     userQuestions()
-        .then((answers) => writeFile('README.md', generateREADME(answers)))
+        .then((answers) => writeFile('README.md', generateMarkdown(answers)))
         .then (() => console.log('Successfully generated README.md!'))
         .catch((err) => console.error(err));
 };
