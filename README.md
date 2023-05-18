@@ -10,7 +10,7 @@ creating their application.
 GitHub: <a href="https://github.com/caitlinramsey/readme-generator" target="_blank">Click Here</a> to view the GitHub repository.
 
 ## Walkthrough Video
-Video: ![Alt text](./readme-generator.mp4)
+Video: <a href="https://drive.google.com/file/d/11-CLwpNzczoGF8fkAh-VjRQTGquNHleA/view" target="_blank">Click Here</a> to view the walkthrough video.
 
 ## Generated README:
 ![Alt text](./README-example.png)
