@@ -1,16 +1,41 @@
-# README Generator
+# Logo Maker
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
-This application uses JavaScript, Node.js, and inquirer to generate a README.md. Once node index.js is entered into the command line, the user is asked a series of questions. Their answers
-to these questions will then be inserted in the proper sections of the generated README file. For the licensing, if a license is chosen, the badge for that license is generated and put into
-the README.md. If no license is chosen, nothing will be inserted. This application makes it so that a developer can quickly generate their README document and spend more time focusing on
-creating their application.
+This application collects information from the user after they have been asked a series of questions. The answers to these questions are complied and used to make a logo that reflects the choices made by the user. 
+
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [GitHub](#github)
+- [Email](#email)
+- [Instructions](#instructions)
+
+## Installation
+Install inquirer and jest to use the application.
+
+## Usage
+To generate an SVG file containing a logo based on user specification.
+
+## License
+MIT
+
+## Contributing
+Email me
+
+## Tests
+Invoke it in the command line by using node index.js
 
 ## GitHub
-GitHub: <a href="https://github.com/caitlinramsey/readme-generator" target="_blank">Click Here</a> to view the GitHub repository.
+GitHub: https://github.com/caitlinramsey/logo-maker
 
-## Walkthrough Video
-Video: <a href="https://drive.google.com/file/d/11-CLwpNzczoGF8fkAh-VjRQTGquNHleA/view" target="_blank">Click Here</a> to view the walkthrough video.
+## Email
+Email: caitlinramsey@outlook.com
 
-## Generated README:
-![Alt text](./README-example.png)
+## Instructions 
+Please email me at the address listed above.
+

@@ -19,6 +19,11 @@ const userQuestions = () => {
         },
         {
             type: 'input',
+            name: 'mockup',
+            message: 'Please include a mockup file:',
+        },
+        {
+            type: 'input',
             name: 'installation',
             message: 'Please provide installation instructions:',
         },
@@ -57,6 +62,11 @@ const userQuestions = () => {
             type: 'input',
             name: 'instructions',
             message: 'Please include instructions for reaching out with questions:',
+        },
+        {
+            type: 'input',
+            name: 'deployed',
+            message: 'Please include the link to the deployed site:',
         },
     ]);
 };
