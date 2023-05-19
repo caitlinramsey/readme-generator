@@ -39,3 +39,6 @@ Email: caitlinramsey@outlook.com
 ## Instructions 
 Please email me at the address listed above.
 
+
+## Generated README:
+![An image of a generated README.md](./README-example.png)
