@@ -13,4 +13,4 @@ GitHub: <a href="https://github.com/caitlinramsey/readme-generator" target="_bla
 Video: <a href="https://drive.google.com/file/d/11-CLwpNzczoGF8fkAh-VjRQTGquNHleA/view" target="_blank">Click Here</a> to view the walkthrough video.
 
 ## Generated README:
-![Alt text](./README-example.png)
+![An image of a generated README.md](./README-example.png)
