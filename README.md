@@ -1,9 +1,13 @@
-# Logo Maker
+# README
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+# README Generator
 
 ## Description
-This application collects information from the user after they have been asked a series of questions. The answers to these questions are complied and used to make a logo that reflects the choices made by the user. 
+This application uses JavaScript, Node.js, and inquirer to generate a README.md. Once node index.js is entered into the command line, the user is asked a series of questions. Their answers
+to these questions will then be inserted in the proper sections of the generated README file. For the licensing, if a license is chosen, the badge for that license is generated and put into
+the README.md. If no license is chosen, nothing will be inserted. This application makes it so that a developer can quickly generate their README document and spend more time focusing on
+creating their application.
 
 ## Table of Contents
 - [Installation](#installation)
@@ -16,29 +20,31 @@ This application collects information from the user after they have been asked a
 - [Instructions](#instructions)
 
 ## Installation
-Install inquirer and jest to use the application.
+The user should install Node.js in order to be able to invoke the application. 
 
 ## Usage
-To generate an SVG file containing a logo based on user specification.
+To generate a quality README.
 
 ## License
 MIT
 
 ## Contributing
-Email me
+Please email me to discuss contributing.
 
 ## Tests
-Invoke it in the command line by using node index.js
+Invoke it in the command line by running node index.js
 
 ## GitHub
-GitHub: https://github.com/caitlinramsey/logo-maker
+GitHub: https://github.com/caitlinramsey
 
 ## Email
 Email: caitlinramsey@outlook.com
 
 ## Instructions 
-Please email me at the address listed above.
-
+Run the application and enter the desired information.
+## Walkthrough Video
+Video: <a href="https://drive.google.com/file/d/11-CLwpNzczoGF8fkAh-VjRQTGquNHleA/view" target="_blank">Click Here</a> to view the walkthrough video.
 
 ## Generated README:
 ![An image of a generated README.md](./README-example.png)
+
